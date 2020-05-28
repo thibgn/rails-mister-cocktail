@@ -7,19 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-require 'json'
+require 'JSON'
 require 'open-uri'
+
+Ingredient.destroy_all
+puts 'Cleaning ingredients..'
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients = JSON.parse(open(url).read)
 
+ingredients['drinks'].each do |ingredient| 
+  Ingredient.create(name: ingredient['strIngredient1'])
+end
 
-puts 'Cleaning ingredients..'
 
-Ingredient.destroy_all
-
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-
-puts '3 ingredients created'
+puts 'Ingredients imported!'

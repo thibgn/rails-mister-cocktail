@@ -10,7 +10,7 @@
 <h4 class="">Add a dose</h4>
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.input :description %>
-  <%= f.association :ingredient %>
+  <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
   <%= f.button :submit, class: "btn btn-sm btn-outline-primary btn-block" %>
 <% end %>
 </div>
