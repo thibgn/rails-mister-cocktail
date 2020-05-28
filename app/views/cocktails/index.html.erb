@@ -1,0 +1,14 @@
+<div class="container mt-4">
+<h2>Liste des Cocktails</h2>
+<ul>
+<% @cocktails.each do |cocktail| %>
+  <%= link_to "<li>#{cocktail.name}</li>".html_safe, cocktail_path(cocktail) %>
+<% end %>
+</ul>
+<hr/>
+<h4 class="">Add a cocktail</h4>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit, class: "btn btn-sm btn-outline-primary btn-block" %>
+<% end %>
+</div>
