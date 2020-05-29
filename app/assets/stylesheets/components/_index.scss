@@ -2,3 +2,17 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.pre-content {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#add_cocktail {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}

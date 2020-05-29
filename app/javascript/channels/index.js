@@ -3,3 +3,10 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+
+const addCocktail = document.querySelector('#add_cocktail');
+  
+addCocktail.addEventListener('click', (e) => {
+  console.log('test');
+  document.querySelector('#new_cocktail_form').classList.toggle('hide');
+});

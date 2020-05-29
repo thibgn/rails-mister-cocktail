@@ -1,11 +1,17 @@
-<h2>Liste des Cocktails</h2>
+
+<div class="pre-content d-flex"><h2>Liste des Cocktails</h2>
+<span id="add_cocktail">Add a cocktail</span>
+</div>
+
+<div id="new_cocktail_form" class="hide">
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "btn btn-sm btn-outline-primary btn-block" %>
+<% end %>
+</div>
+
 <% @cocktails.each do |cocktail, dose| %>
-  <hr/>
   <%= render "shared/card", cocktail: cocktail %>
 <% end %>
 <hr/>
-<h4 class="">Add a cocktail</h4>
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: "btn btn-sm btn-outline-primary btn-block" %>
-<% end %>

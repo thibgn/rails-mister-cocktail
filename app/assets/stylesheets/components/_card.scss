@@ -1,8 +1,22 @@
+$creme: #FBF3E0;
+$myred: #B84231;
+$black: #2B2013;
+$gold: #D6AB2F;
+$white: #FDFCF8;
+
 .cocktail-card {
   width: 100%;
-  background-color: red;
+  background: $myred;
+  background-origin: border-box;
   height: 5rem;
   align-items: center;
+  transition: 200ms ease-in-out;
+  &:hover {
+    transform: translateX(8px);
+    transform-origin: bottom left;
+    background: url('https://source.unsplash.com/collection/10566788/');
+    color: $white;
+  }
 }
 
 a {

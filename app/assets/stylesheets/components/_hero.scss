@@ -1,8 +1,14 @@
+$creme: #FBF3E0;
+$myred: #B84231;
+$black: #2B2013;
+$gold: #D6AB2F;
+$white: #FDFCF8;
+
 .hero-container {
+  background-position: center center;
   background-size: cover;
-  background-position: center;
   padding: 150px 0;
-  background-image: url('https://source.unsplash.com/collection/54c44a961a4ccc3a948b139f82341735/1600x900');
+  background: linear-gradient(165.37deg, rgba(0, 0, 0, 0.76) 25.99%, rgba(0, 0, 0, 0.45) 79.23%), url('https://source.unsplash.com/collection/10571700/1600x900');
   height: 80vh;
   padding-left: 15%;
   padding-top: 15%;
