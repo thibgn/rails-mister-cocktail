@@ -1,0 +1,17 @@
+.hero-container {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  background-image: url('https://source.unsplash.com/collection/54c44a961a4ccc3a948b139f82341735/1600x900');
+  height: 80vh;
+  padding-left: 15%;
+  padding-top: 15%;
+}
+
+.hero-title h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 52px;
+  font-weight: bold;
+}

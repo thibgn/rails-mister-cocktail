@@ -1,0 +1,12 @@
+<%= link_to cocktail_path(cocktail) do %>
+<div class="cocktail-card d-flex p-2 rounded">
+  <div class="cocktail-infos">
+    <h3><%= cocktail.name %></h3>
+    <span>
+      <% if cocktail.doses.first %>
+      <%= cocktail.doses.first.ingredient.name%>
+      <% end %>
+    </span>
+  </div>
+</div>
+<% end %>

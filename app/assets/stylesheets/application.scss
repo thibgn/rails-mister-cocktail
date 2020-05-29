@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/hero";
+@import "components/card";
+
+$spacer: 8px;
+$creme: #FBF3E0;
+$red: #B84231;
+$black: #2B2013;
+$gold: #D6AB2F;
+$white: #FDFCF8;
+
+body {
+  background: $creme;
+}
