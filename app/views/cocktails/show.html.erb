@@ -1,18 +1,27 @@
-<h2>A specific cocktail</h2>
-<hr/>
 <h3><%= @cocktail.name %></h3>
-<% if @cocktail.photo %>
-<%= cl_image_tag @cocktail.photo.key, width: 400, height: 300, crop: :fill %>
-<% end %>
-<% @cocktail.doses.each do |dose| %>
-  <li><%= dose.description + ' ' + dose.ingredient.name  %>
-  <%= link_to 'x', dose_path(dose), method: 'DELETE' %></li>
-<% end %>
-<hr/>
+<div class="cocktail">
+  <div class="photo">
+    <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, width: 400, height: 300, crop: :fill %>
+    <% end %>
+  </div>
+  <div class="doses">
+  <% if !@cocktail.doses.empty? %>
+  <h4>Ingredients</h4>
+  <% else %>
+  <h4>No Ingredients :(</h4>
+  <% end %>
+    <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.description + ' ' + dose.ingredient.name  %>
+      <%= link_to 'x', dose_path(dose), method: 'DELETE' %></li>
+    <% end %>
+  </div>
+</div>
+<hr />
 <h4 class="">Add a dose</h4>
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
-  <%= f.button :submit, class: "btn btn-sm btn-outline-primary btn-block" %>
+<%= f.input :description %>
+<%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
+<%= f.button :submit, class: "btn btn-sm btn-outline-primary btn-block" %>
 <% end %>
 </div>

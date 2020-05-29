@@ -16,3 +16,13 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
+
+  
+document.addEventListener('turbolinks:load', () => {
+  const addCocktail = document.querySelector('#add_cocktail');
+  addCocktail.addEventListener('click', (e) => {
+    console.log('test');
+    document.querySelector('#new_cocktail_form').classList.toggle('hide');
+  });  
+});
+

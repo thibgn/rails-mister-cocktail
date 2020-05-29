@@ -2,17 +2,8 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "base";
+@import "card";
+@import "hero";
+@import "utils";
 
-.pre-content {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#add_cocktail {
-  cursor: pointer;
-}
-
-.hide {
-  display: none;
-}
